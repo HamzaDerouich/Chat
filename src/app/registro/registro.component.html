@@ -1,0 +1,51 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-5 shadow-lg rounded" style="width: 100%; max-width: 400px;">
+    <h3 class="text-center mb-4 text-success">Registro</h3>
+    <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+      <!-- Nombre Completo -->
+      <div class="form-group mb-3">
+        <label for="nombre" class="form-label">Nombre Completo</label>
+        <input
+          type="text"
+          id="nombre"
+          class="form-control"
+          placeholder="Introduce tu nombre completo"
+          [(ngModel)]="usuario.nombre"
+          name="nombre"
+          required />
+      </div>
+
+      <!-- Correo -->
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Correo</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          placeholder="Introduce tu correo"
+          [(ngModel)]="usuario.email"
+          name="email"
+          required
+          email />
+      </div>
+
+      <!-- Contraseña -->
+      <div class="form-group mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          placeholder="Introduce tu contraseña"
+          [(ngModel)]="usuario.pwd"
+          name="password"
+          required />
+      </div>
+
+      <!-- Botón -->
+      <button type="submit" class="btn btn-success w-100 py-2">Registrarse</button>
+    </form>
+    <!-- Mensaje de error -->
+
+  </div>
+</div>
